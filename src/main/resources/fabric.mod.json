@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "longcommandsender",
+	"version": "${version}",
+	"name": "LongCommandSender",
+	"description": "Send a super long command to crash server",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "mit",
+	"icon": "assets/longcommandsender/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.lcs.LongCommandSender"
+		],
+		"client": [
+			"com.lcs.LongCommandSenderClient"
+		]
+	},
+	"mixins": [
+		"longcommandsender.mixins.json",
+		{
+			"config": "longcommandsender.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
